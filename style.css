@@ -1,0 +1,153 @@
+/* to apply onto the whole web page */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_box{
+    /* background image */
+    background: url("photo.jpg");
+    /* to make the image appear into whole screnn - vire port */
+    height: 100vh;
+    background-size: cover;
+    }
+
+.btn_one i{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    /* to set the position - parent*/
+    position: absolute;
+    left: 16px;
+    /* increase the height for size of content - hamburger*/
+    line-height: 60px;
+    cursor: pointer;
+    /* makes the hamburger bigger */
+    transition: all 0.3s linear ;
+}
+
+.sidebar_menu{
+    /* makes the whole menu dispaer */
+    /* to set the position we need to have this */
+    position: fixed;
+    /* - = more towards the left */
+    left: -300px;
+
+    /* to take complete hight = inspect to see the change*/
+    height: 100vh;  
+    width: 300px;
+    /* control the opacity - tranperancy  - clear/ glass*/
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    /* side panner slides in */
+    transition: all 0.3s linear ;
+}
+
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    height: 60px;
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    /* to remove the underline */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.sidebar_menu .btn_two i {
+    color: gray;
+    font-size: 25px;
+    line-height: 60px;
+    position: absolute;
+    /* bring to side corner */
+    left: 275px;
+    /* opacity: 0; */
+    cursor: pointer;
+    transition: all 0.3s linear ;
+}
+
+.sidebar_menu .menu{
+    color: white;
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu .menu li{
+    margin-top: 6px;
+    /* top to bottom - 10px left right - 20px */
+    padding: 14px 20px;
+}
+
+.sidebar_menu .menu i, a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.sidebar_menu .menu i{
+    /* making distance between the name and logo */
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media{
+    color: white;
+    /* to make the element follow its parent */
+    position: absolute;
+    bottom: 50px;
+    left: 25%;
+    opacity: 0.5;
+}
+
+.sidebar_menu .social_media i{
+    color: white;
+    opacity: 0.5;
+    padding: 0 5px;
+}
+
+#check{
+    /* to make anything disapear from the screen + want their place to get removed */
+    display: none;
+}
+
+.sidebar_menu .menu li:hover{
+    /* when we hover over the element we see the shadow */
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.btn_one i:hover{
+    font-size: 40px;
+}
+
+.btn_two i:hover{
+    font-size: 30px;
+}
+
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    /* to make the icon bigger/ pop out */
+    transform: scale(2);
+}
+/* ~ shows sibling */
+
+#check:checked ~ .sidebar_menu{ 
+    /* checkbox label */
+left: 0;
+}
+
+#check:checked ~ .btn_one i{
+    /* makes the hamburger disapper */
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two i{
+    opacity: 1;
+}
